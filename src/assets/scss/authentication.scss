@@ -1,0 +1,156 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.authentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  margin: 10px;
+  border-radius: 8px;
+  border: 1px solid rgb(206, 206, 206);
+  background-color: white;
+
+  .login-text {
+    font-weight: bold;
+    color: black;
+    font-size: 1.5rem;
+  }
+
+  svg {
+    padding-right: 8px;
+  }
+
+  p,
+  a {
+    text-transform: uppercase;
+    color: rgb(122, 122, 122);
+    font-weight: 400;
+  }
+
+  .buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      text-transform: lowercase;
+    }
+  }
+
+  .forgot-password-text {
+    p {
+      text-transform: capitalize;
+    }
+  }
+
+  button {
+    border-radius: 50px;
+    height: 33px;
+    display: flex;
+    padding: 2px 0;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin: 30px;
+    width: 150px;
+    outline: none;
+    border: none;
+    box-shadow: 5px 5px 15px gray;
+    p {
+      padding: 0 10px;
+    }
+  }
+
+  .facebook-button {
+    background-color: #3b5998;
+    i {
+      padding: 0 10px;
+    }
+  }
+  .twitter-button {
+    background-color: rgb(29, 161, 242);
+  }
+
+  .inputs-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+
+    .input-container {
+      @include placeholder {
+        padding-left: 10px;
+        background: rgb(197, 197, 197);
+      }
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      input {
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        height: 80%;
+      }
+
+      .mail-input {
+        background-color: rgb(197, 197, 197);
+      }
+
+      margin: 8px 0;
+      background-color: rgb(197, 197, 197);
+      outline: none;
+      border: none;
+      height: 35px;
+      padding: 0 5px;
+      box-shadow: 2px 2px 5px 3px rgb(177, 176, 176);
+    }
+  }
+
+  .login-button {
+    background-color: rgb(98, 188, 240);
+    text-transform: uppercase;
+    width: 400px;
+  }
+
+  .bottom-container {
+    display: flex;
+    flex-direction: row;
+
+    p,
+    a {
+      margin: 5px;
+    }
+
+    .no-account-text {
+      text-transform: none;
+    }
+
+    .signup-text {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+}
