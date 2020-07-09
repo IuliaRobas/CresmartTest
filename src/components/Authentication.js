@@ -4,6 +4,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import LockIcon from "@material-ui/icons/Lock";
 import PersonIcon from "@material-ui/icons/Person";
 import FacebookLogin from "react-facebook-login";
+import TwitterLogin from "react-twitter-login";
 
 const Authentication = props => {
   const [email, setEmail] = useState("");
@@ -15,27 +16,32 @@ const Authentication = props => {
     props.history.push("/dashboard");
   };
 
+  const responseTwitter = response => {};
+
   return (
     <div className="authentication">
       <div className="upper-container">
         <p className="login-text">login</p>
       </div>
       <div className="buttons-container">
-        <button>
-          <FacebookLogin
-            icon="fa-facebook"
-            textButton="facebook"
-            cssClass="facebook-button"
-            appId="1766096386863797"
-            autoLoad={false}
-            fields="name,email,picture"
-            callback={responseFacebook}
-          />
-        </button>
-        <button className="button twitter-button">
-          <FontAwesomeIcon icon={faTwitter} />
-          twitter
-        </button>
+        <FacebookLogin
+          icon="fa-facebook"
+          textButton="facebook"
+          cssClass="facebook-button"
+          appId="1766096386863797"
+          autoLoad={false}
+          fields="name,email,picture"
+          callback={responseFacebook}
+        />
+        <FacebookLogin
+          icon="fa-twitter"
+          textButton="twitter"
+          cssClass="twitter-button"
+          appId="1766096386863797"
+          autoLoad={false}
+          fields="name,email,picture"
+          callback={responseTwitter}
+        />
       </div>
       <div className="middle">
         <p>or</p>

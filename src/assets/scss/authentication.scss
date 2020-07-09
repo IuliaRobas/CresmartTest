@@ -66,8 +66,10 @@ input:-webkit-autofill:active {
   }
 
   button {
+    cursor: pointer;
     border-radius: 50px;
     height: 33px;
+
     display: flex;
     padding: 2px 0;
     align-items: center;
@@ -85,12 +87,16 @@ input:-webkit-autofill:active {
 
   .facebook-button {
     background-color: #3b5998;
+
     i {
       padding: 0 10px;
     }
   }
   .twitter-button {
     background-color: rgb(29, 161, 242);
+    i {
+      padding: 0 10px;
+    }
   }
 
   .inputs-container {
