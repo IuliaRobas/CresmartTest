@@ -21,15 +21,17 @@ const Authentication = props => {
         <p className="login-text">login</p>
       </div>
       <div className="buttons-container">
-        <FacebookLogin
-          icon="fa-facebook"
-          textButton="facebook"
-          cssClass="facebook-button"
-          appId="1766096386863797"
-          autoLoad={false}
-          fields="name,email,picture"
-          callback={responseFacebook}
-        />
+        <button>
+          <FacebookLogin
+            icon="fa-facebook"
+            textButton="facebook"
+            cssClass="facebook-button"
+            appId="1766096386863797"
+            autoLoad={false}
+            fields="name,email,picture"
+            callback={responseFacebook}
+          />
+        </button>
         <button className="button twitter-button">
           <FontAwesomeIcon icon={faTwitter} />
           twitter

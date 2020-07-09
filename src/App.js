@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+
 import Authentication from "./components/Authentication";
 import Dashboard from "./components/Dashboard";
 import PublicRoute from "./routes/PublicRoute";
@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="app">
         <Switch>
           <PublicRoute
             restricted={false}

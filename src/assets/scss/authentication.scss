@@ -52,6 +52,7 @@ input:-webkit-autofill:active {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 400px;
 
     p {
       text-transform: lowercase;
@@ -97,6 +98,10 @@ input:-webkit-autofill:active {
     flex-direction: column;
     width: 400px;
 
+    @media only screen and (max-width: 400px) {
+      width: 250px;
+    }
+
     .input-container {
       @include placeholder {
         padding-left: 10px;
@@ -132,6 +137,10 @@ input:-webkit-autofill:active {
     background-color: rgb(98, 188, 240);
     text-transform: uppercase;
     width: 400px;
+
+    @media only screen and (max-width: 400px) {
+      width: 250px;
+    }
   }
 
   .bottom-container {
